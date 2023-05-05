@@ -5,7 +5,7 @@ let submitBtn = document.querySelector(".btn");
 let scores = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
 
-// window.confirm("You have 75 seconds to answer 5 questions.  \nAre you ready to Play?")
+submitBtn.addEventListener("click", setTime)
 
 let timeLeft = 76;
 
@@ -13,14 +13,11 @@ function setTime(){
   let timerInterval = setInterval(function(){
     timeLeft--;
     countTimer.textContent = "Seconds Left: " + timeLeft;
-    
-    if(timeLeft === 0) {
+
+    if (timeLeft === 0) {
       clearInterval(timerInterval);}
     }, 1000);
-
 }
-
-setTime();
 
 window.addEventListener("contextmenu", e => e.preventDefault());
 

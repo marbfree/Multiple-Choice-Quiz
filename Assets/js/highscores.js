@@ -11,4 +11,3 @@ function gotoLink(link){
     location.href="/index.html";
 }
 
-// returnBtn[1].addEventListener("click", 
