@@ -4,11 +4,14 @@ let answerKey = document.getElementsByClassName("button");
 let submitBtn = document.querySelector(".btn");
 let scores = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
-// let container = document.querySelector(".container")
+let eachRound = document.querySelector(".round")
 
 window.addEventListener("contextmenu", e => e.preventDefault());
 submitBtn.addEventListener("click", setTime)
 
+function showQuestion(){
+  if 
+}
 
 // submitBtn.addEventListener("click", function(event){
 //   var element = event.target;

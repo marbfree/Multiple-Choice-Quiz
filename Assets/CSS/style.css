@@ -38,7 +38,9 @@ h1, h2, p {
     white-space: pre;
 }
 
-
+.round {
+    visibility: hidden;
+}
 
 input {
     display: block;
