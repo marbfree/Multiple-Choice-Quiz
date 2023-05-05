@@ -6,6 +6,10 @@ returnBtn[0].setAttribute("style", "border: solid #00008b 2px; background-color:
 returnBtn[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
 titleHS.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
 
+returnBtn[0].addEventListener("click", function(){
+    console.log("button clicked");
+});
+
 function gotoLink(link){
     console.log(link.value);
     location.href="/index.html";
