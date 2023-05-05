@@ -41,7 +41,9 @@ h1, h2, p {
 .round {
     visibility: hidden;
 }
-
+.homepage{
+    visibility: visible;
+}
 input {
     display: block;
     align: center;
