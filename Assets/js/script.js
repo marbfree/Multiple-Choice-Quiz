@@ -1,33 +1,23 @@
+let homePage = document.querySelector(".homePage");
+let question = document.querySelectorAll(".question");
 let quizTitle = document.getElementById("quizName");
 let titleQuestion = document.getElementById("question");
 let answerKey = document.getElementsByClassName("button");
 let quizStart = document.querySelector(".btn");
 let scores = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
-// let startGame = document.getElementsByClassName("homePage");
-// let eachRound = document.getElementsByClassName("round")
-let timeLeft = 76;
+let gameStart = document.getElementsByClassName("homePage");
+let timeLeft = 75;
+let submitBtn = document.querySelectorAll(".submit")
+let questions = document.querySelectorAll("h2");
 
 window.addEventListener("contextmenu", e => e.preventDefault());
-// quizStart.addEventListener("click", showQuestion);
-quizStart.addEventListener("click", setTime);
 
-// quizStart.addEventListener("click", function hidePage(){
-//   if (startGame.style.visibility === visible){
-//   startGame.style.visibility = hidden;
-//   } else
-//   startGame.style.visibility = visible
-// });
-
-// quizStart.addEventListener("click", gameStart)
-
-// function showQuestion() {
-//   if (eachRound.style.display === "none") {
-//     eachRound.style.display = "block";
-//   } else {
-//     eachRound.style.display = "none";
-//   }
-// };
+quizStart.addEventListener("click", function(){
+  homePage.classList.replace("visible", "hidden");
+  question[0].classList.replace("hidden", "visible");
+  setTime();
+});
 
 function setTime(){
   let timerInterval = setInterval(function(){
@@ -39,41 +29,46 @@ function setTime(){
     }, 1000);
 }
 
+submitBtn[0].addEventListener("click", function(){
+  question[0].classList.replace("visible", "hidden");
+  question[1].classList.replace("hidden", "visible")
+});
 
+submitBtn[1].addEventListener("click", function(){
+  question[1].classList.replace("visible", "hidden");
+  question[2].classList.replace("hidden", "visible");
+});
+
+submitBtn[2].addEventListener("click", function(){
+  question[2].classList.replace("visible", "hidden");
+  question[3].classList.replace("hidden", "visible");
+});
+
+submitBtn[3].addEventListener("click", function(){
+  question[3].classList.replace("visible", "hidden");
+  question[4].classList.replace("hidden", "visible");
+});
 
 quizTitle.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
 countTimer.setAttribute("style", "color: #00008b;");
 quizStart.setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
-// quizStart[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
 scores.setAttribute("style", "color: #00008b; text-decoration: none;");
 
 titleQuestion.setAttribute("style", "margin-bottom: 50px; font: bolder; font-size: 30px;");
-answerKey[0].setAttribute("style", "padding-left: 10px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
-answerKey[1].setAttribute("style", "padding-left: 10px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 10% 25%;");
-answerKey[2].setAttribute("style", "padding-left: 10px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
-answerKey[3].setAttribute("style", "padding-left: 10px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 10% 25%;");
-answerKey[4].setAttribute("style", "padding-left: 30px; padding-right: 30px; background-color: #00008b; color: white; border: solid #FF7F50 2px;");
 
+for (let i = 0; i < answerKey.length; i++){
+  answerKey[i].setAttribute("style", "padding-left: 20px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
+};
 
-// function showQuestion(){
-//   if 
-// }
+for(let i = 0; i < submitBtn.length; i++){
+submitBtn[i].setAttribute("style", "padding-left: 30px; padding-right: 30px; background-color: #00008b; color: white; border: solid #FF7F50 2px; margin-top: 50px;");
+};
 
-// quizStart.addEventListener("click", function(event){
-//   var element = event.target;
+submitBtn[4].addEventListener("click", function(){
+  console.log("button clicked");
+});
 
-//   if (element.matches(answerKey)){
-//     var state = element.getAttribute("data-state");
-
-//   if (state === "hidden"){
-//     element.textContent = element.dataset.value;
-//     element.dataset.state = "visible";
-//   } else{
-//     element.textContect="";
-//     element.setAttribute("data-state", "hidden")
-//   }
-// }
-// })
-
-// when play button is clicked, i want to unhide the next question
-// i want to keep the header, h1 and aside element on each page
+function gotoLink(link){
+  console.log(link.value);
+  location.href="Assets/highscores.html";
+}

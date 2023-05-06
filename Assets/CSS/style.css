@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 
-.button, .btn:hover{
+.button, .btn, .submit:hover{
     cursor: pointer;
 }
 header {
@@ -31,19 +31,27 @@ h1, h2, p {
     text-align: center;
 }
 
-#paragraph { 
+h2 {
+    margin-bottom: 50px;
+}
+
+.paragraph { 
     text-align: center;
     margin: 20px, 50px;
     color:#00008b;
+}
+
+.lineBreak{
     white-space: pre;
 }
 
-.round {
-    visibility: hidden;
+.hidden {
+    display: none;
 }
-.homepage{
-    visibility: visible;
+.visible{
+    display: block;
 }
+
 input {
     display: block;
     align: center;
@@ -55,14 +63,13 @@ input {
     border-radius: 20% / 600%;
 }
 
-.button {
+.button, .submit {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    justify-content: space-between;
     margin: auto;
     margin-bottom: 10px;
-    /* align-items: center; */
+    max-width: fit-content;
 }
 
 .btn {

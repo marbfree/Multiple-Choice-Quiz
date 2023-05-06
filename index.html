@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="reset" href="Assets/CSS/reset.css">
-    <link rel="stylesheet" href="Assets/CSS/style.css">
-    <title>Multiple-Choice-Quiz</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="reset" href="Assets/CSS/reset.css">
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+  <title>Multiple-Choice-Quiz</title>
 </head>
+
 <body>
-    <header><a href="Assets/highscores.html">High Scores</a></header>
-    <aside id="timer">Seconds left: </aside>
-      <section>
-        <h1 id="quizName">Multiple Choice Quiz</h1>
-        <div class="homePage">
-          <p id="paragraph">
-          Choose the correct answer and move on to the next question. 
-          Get the answer wrong and you loose 15 seconds off the clock. 
-          You have 75 seconds to complete the quiz.  
-          Ready to test your knowledge? 
-          </p>
-          <button class="btn">Let's Go!</button>
-        </div>
-    </section>
-    <section class="round">
-          <h2 id="question">Which keywords are used to define a variable?</h2>
-            <div class="container">
-              <button class="button">let</button>
-              <button class="button">var</button>
-              <button class="button">const</button>
-              <button class="button">All of the above</button>
-              <button class="button">Submit</button>
-            </div>
-      </section>
+  <header><a href="Assets/highscores.html">High Scores</a></header>
+  <aside id="timer">Seconds left: </aside>
+  <section>
+    <h1 id="quizName">Multiple Choice Quiz</h1>
+    <div class="homePage visible">
+      <p class="lineBreak paragraph">
+        Choose the correct answer and move on to the next question.
+        Get the answer wrong and you loose 15 seconds off the clock.
+        You have 75 seconds to complete the quiz.
+        Ready to test your knowledge?
+      </p>
+      <button class="btn">Let's Go!</button>
+    </div>
+  </section>
+  <section class="question hidden">
+    <h2 id="question">Which keywords are used to define a variable?</h2>
+    <div class="container">
+      <button class="button">let</button>
+      <button class="button">var</button>
+      <button class="button">const</button>
+      <button class="button">All of the above</button>
+      <button class="submit">Submit</button>
+    </div>
+  </section>
+  <section class="question hidden">
+    <h2 id="question" class="lineBreak">
+      What is the term for a set of instructions that
+      tells the computer how to preform a certain task?</h2>
+    <div class="container">
+      <button class="button">call</button>
+      <button class="button">function</button>
+      <button class="button">parameter</button>
+      <button class="button">event</button>
+      <button class="submit">Submit</button>
+    </div>
+  </section>
+  <section class="question hidden">
+    <h2 id="question">Which term below is NOT a data type?</h2>
+    <div class="container">
+      <button class="button">Boolean</button>
+      <button class="button">Number</button>
+      <button class="button">String</button>
+      <button class="button">Letter</button>
+      <button class="submit">Submit</button>
+    </div>
+  </section>
+  <section class="question four hidden">
+    <h2 id="question">What returns a Boolean result? </h2>
+    <div class="container">
+      <button class="button">===</button>
+      <button class="button">--</button>
+      <button class="button">++</button>
+      <button class="button">All of the above</button>
+      <button class="submit">Submit</button>
+    </div>
+  </section>
+  <section class="question five hidden">
+    <h2 id="question">Which operator tests whether two values are NOT equal?</h2>
+    <div class="container">
+      <button class="button">||</button>
+      <button class="button">-+</button>
+      <button class="button">!=</button>
+      <button class="button">All of the above</button>
+      <button class="submit link" onclick="gotoLink(this)" href="Assets/highscores.html">Submit</button>
+    </div>
+  </section>
   <script src="./Assets/js/script.js"></script>
 </body>
+
 </html>
