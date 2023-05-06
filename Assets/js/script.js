@@ -10,6 +10,7 @@ let gameStart = document.getElementsByClassName("homePage");
 let timeLeft = 75;
 let submitBtn = document.querySelectorAll(".submit")
 let questions = document.querySelectorAll("h2");
+let optionsContainer = document.querySelectorAll("#container");
 
 window.addEventListener("contextmenu", e => e.preventDefault());
 
@@ -49,11 +50,23 @@ submitBtn[3].addEventListener("click", function(){
   question[4].classList.replace("hidden", "visible");
 });
 
+for (let i = 0; i < optionsContainer.length; i++){
+optionsContainer[i].addEventListener("click", function(e){
+  let selectedOption = e.target;
+  console.log(selectedOption);
+  let isCorrect = selectedOption.dataset.state;
+  console.log(isCorrect);
+  if (isCorrect === "true"){
+    alert("Correct!");
+  } else if (isCorrect === "false"){
+    alert("Try Again!");
+  }
+});}
+
 quizTitle.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
 countTimer.setAttribute("style", "color: #00008b;");
 quizStart.setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
 scores.setAttribute("style", "color: #00008b; text-decoration: none;");
-
 titleQuestion.setAttribute("style", "margin-bottom: 50px; font: bolder; font-size: 30px;");
 
 for (let i = 0; i < answerKey.length; i++){

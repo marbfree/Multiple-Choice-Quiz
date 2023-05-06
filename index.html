@@ -27,55 +27,55 @@
   </section>
   <section class="question hidden">
     <h2 id="question">Which keywords are used to define a variable?</h2>
-    <div class="container">
-      <button class="button">let</button>
-      <button class="button">var</button>
-      <button class="button">const</button>
-      <button class="button">All of the above</button>
-      <button class="submit">Submit</button>
+    <div id="container">
+      <button class="button" data-state="false">let</button>
+      <button class="button" data-state="false">var</button>
+      <button class="button" data-state="false">const</button>
+      <button class="button" data-state="true">All of the above</button>
     </div>
+    <button class="submit">Submit</button>
   </section>
   <section class="question hidden">
-    <h2 id="question" class="lineBreak">
-      What is the term for a set of instructions that
+    <h2 id="question" class="lineBreak">What is the term for a set of instructions that
       tells the computer how to preform a certain task?</h2>
-    <div class="container">
-      <button class="button">call</button>
-      <button class="button">function</button>
-      <button class="button">parameter</button>
-      <button class="button">event</button>
-      <button class="submit">Submit</button>
+    <div id="container">
+      <button class="button" data-state="false">call</button>
+      <button class="button" data-state="true">function</button>
+      <button class="button" data-state="false">parameter</button>
+      <button class="button" data-state="false">event</button>
     </div>
+    <button class="submit">Submit</button>
   </section>
   <section class="question hidden">
     <h2 id="question">Which term below is NOT a data type?</h2>
-    <div class="container">
-      <button class="button">Boolean</button>
-      <button class="button">Number</button>
-      <button class="button">String</button>
-      <button class="button">Letter</button>
-      <button class="submit">Submit</button>
+    <div id="container">
+      <button class="button" data-state="false">Boolean</button>
+      <p class = "showValue hidden">Try Again!</p>
+      <button class="button" data-state="false">Number</button>
+      <button class="button" data-state="false">String</button>
+      <button class="button" data-state="true">Letter</button>
     </div>
+    <button class="submit">Submit</button>
   </section>
   <section class="question four hidden">
     <h2 id="question">What returns a Boolean result? </h2>
-    <div class="container">
-      <button class="button">===</button>
-      <button class="button">--</button>
-      <button class="button">++</button>
-      <button class="button">All of the above</button>
-      <button class="submit">Submit</button>
+    <div id="container">
+      <button class="button" data-state="true">===</button>
+      <button class="button" data-state="false">--</button>
+      <button class="button" data-state="false">++</button>
+      <button class="button" data-state="false">All of the above</button>
     </div>
+    <button class="submit">Submit</button>
   </section>
   <section class="question five hidden">
     <h2 id="question">Which operator tests whether two values are NOT equal?</h2>
-    <div class="container">
-      <button class="button">||</button>
-      <button class="button">-+</button>
-      <button class="button">!=</button>
-      <button class="button">All of the above</button>
-      <button class="submit link" onclick="gotoLink(this)" href="Assets/highscores.html">Submit</button>
+    <div id="container">
+      <button class="button" data-state="false">||</button>
+      <button class="button" data-state="false">-+</button>
+      <button class="button" data-state="true">!=</button>
+      <button class="button" data-state="false">All of the above</button>
     </div>
+    <button class="submit link" onclick="gotoLink(this)" href="Assets/highscores.html">Submit</button>
   </section>
   <script src="./Assets/js/script.js"></script>
 </body>
