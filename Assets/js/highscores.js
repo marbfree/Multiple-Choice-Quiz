@@ -20,8 +20,10 @@ subScore[0].addEventListener("click", function(){
 // displays your initials and eventually your score and will stay there
 function returnInitials(){
     let input = document.getElementById("initials").value;
-    displayScore.textContent = input;
+    displayScore.textContent = input + localStorage.getItem("correct");
 }
+
+
 
 // takes you back to home page
 function gotoLink(link){

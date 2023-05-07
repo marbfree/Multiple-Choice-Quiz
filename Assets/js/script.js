@@ -8,6 +8,7 @@ let countTimer = document.querySelector("#timer");
 let timeLeft = 75;
 let optionsContainer = document.querySelectorAll("#container");
 let answerTrue = document.querySelector(".true");
+let correctAnswers = localStorage.getItem("correct");
 
 // prevents right click
 window.addEventListener("contextmenu", e => e.preventDefault());
@@ -65,7 +66,8 @@ optionsContainer[i].addEventListener("click", function(e){
   let isCorrect = selectedOption.dataset.state;
   console.log(isCorrect);
   if (isCorrect === "true"){
-    localStorage.setItem("answer", 1)
+    correctAnswers++
+    localStorage.setItem("correct", correctAnswers)
     alert("Correct!");
   } else if (isCorrect === "false"){
     alert("Wrong!");
@@ -75,7 +77,7 @@ optionsContainer[i].addEventListener("click", function(e){
 
 // function addUpScore(){
 //   let score = localStoreage.getItem("answer");
-//   locatio.textContent = score;
+//   location.textContent = score;
 
 // }
 
