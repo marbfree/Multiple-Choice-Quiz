@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,20 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>High Scores</title>
 </head>
+
 <body>
     <h1> High Scores</h1>
-    <form>  
-        <input type= "value" placeholder="Your initials">
-    </form>
-    <button class="btn">Submit Score</button>
-    <button class="btn" onclick="gotoLink(this)" href="/index.html">Return to Quiz</button>
-    
+    <section class="enterScore visible">
+        <h2 id="scored">Your Score:</h2>
+            <input id="initials" type="text" placeholder="Enter your initials">
+        <button class="btn subScore" onclick="returnInitials()">Submit Score</button>
+    </section>
+    <section class="display hidden">
+        <h2 id="myScore">scores displayed here</h2>
+        <button class="btn" onclick="gotoLink(this)" href="/index.html">Return to Quiz</button>
+    </section>
 </body>
-  <script src = "./js/highscores.js"></script>
-  <!-- <script src = "./js/script.js"></script> -->
+<script src="./js/highscores.js"></script>
+<!-- <script src = "./js/script.js"></script> -->
+
 </html>
