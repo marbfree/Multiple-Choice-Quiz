@@ -17,6 +17,7 @@ window.addEventListener("contextmenu", e => e.preventDefault());
 quizStart.addEventListener("click", function(){
   homePage.classList.replace("visible", "hidden");
   question[0].classList.replace("hidden", "visible");
+  localStorage.clear("correct");
   setTime();
 });
 
@@ -35,7 +36,8 @@ function setTime(){
 // pseudo code:
 // A)if false answer button is pressed, 5 seconds is removed from time
 //    1.create function to remove 5000 from timer
-// B)add 1 to score when a correct answer is chosen
+// B)clear scores each round
+// c)high scores page when click link at top of homepage
 
 // shows and hides each question and answer block by selecting the right answer
 answerKey[3].addEventListener("click", function(){
@@ -96,6 +98,9 @@ for (let i = 0; i < answerKey.length; i++){
 function gotoLink(link){
   console.log(link.value);
   location.href="Assets/highscores.html";
+  enterEl.classList.replace("hidden", "visible");
+  showHighScores.classList.replace("visible", "hidden");
+  
 }
 
 

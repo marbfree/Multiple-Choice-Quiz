@@ -12,7 +12,6 @@ titleHS.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; f
 
 // shows/hides two sections of html
 subScore[0].addEventListener("click", function(){
-    console.log("button clicked");
     enterEl.classList.replace("visible", "hidden");
     showHighScores.classList.replace("hidden", "visible");
 });
@@ -22,8 +21,6 @@ function returnInitials(){
     let input = document.getElementById("initials").value;
     displayScore.textContent = input + localStorage.getItem("correct");
 }
-
-
 
 // takes you back to home page
 function gotoLink(link){
