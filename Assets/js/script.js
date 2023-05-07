@@ -1,14 +1,11 @@
 let homePage = document.querySelector(".homePage");
 let question = document.querySelectorAll(".question");
 let quizTitle = document.getElementById("quizName");
-let titleQuestion = document.getElementById("question");
 let answerKey = document.getElementsByClassName("button");
 let quizStart = document.querySelector(".btn");
-let scores = document.querySelector("header");
+let scoresLink = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
-let gameStart = document.getElementsByClassName("homePage");
 let timeLeft = 75;
-let questions = document.querySelectorAll("h2");
 let optionsContainer = document.querySelectorAll("#container");
 
 window.addEventListener("contextmenu", e => e.preventDefault());
@@ -72,8 +69,7 @@ optionsContainer[i].addEventListener("click", function(e){
 quizTitle.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
 countTimer.setAttribute("style", "color: #00008b;");
 quizStart.setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
-scores.setAttribute("style", "color: #00008b; text-decoration: none;");
-titleQuestion.setAttribute("style", "margin-bottom: 50px; font: bolder; font-size: 30px;");
+scoresLink.setAttribute("style", "color: #00008b; text-decoration: none;");
 
 for (let i = 0; i < answerKey.length; i++){
   answerKey[i].setAttribute("style", "padding-left: 20px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
