@@ -30,22 +30,22 @@ function setTime(){
     }, 1000);
 }
 
-submitBtn[0].addEventListener("click", function(){
+answerKey[3].addEventListener("click", function(){
   question[0].classList.replace("visible", "hidden");
   question[1].classList.replace("hidden", "visible")
 });
 
-submitBtn[1].addEventListener("click", function(){
+answerKey[5].addEventListener("click", function(){
   question[1].classList.replace("visible", "hidden");
   question[2].classList.replace("hidden", "visible");
 });
 
-submitBtn[2].addEventListener("click", function(){
+answerKey[11].addEventListener("click", function(){
   question[2].classList.replace("visible", "hidden");
   question[3].classList.replace("hidden", "visible");
 });
 
-submitBtn[3].addEventListener("click", function(){
+answerKey[12].addEventListener("click", function(){
   question[3].classList.replace("visible", "hidden");
   question[4].classList.replace("hidden", "visible");
 });
