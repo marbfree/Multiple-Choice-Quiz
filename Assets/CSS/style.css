@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 
-.button, .btn, .submit:hover{
+.button, .btn:hover{
     cursor: pointer;
 }
 header {
@@ -63,7 +63,7 @@ input {
     border-radius: 20% / 600%;
 }
 
-.button, .submit {
+.button{
     display: flex;
     flex-direction: column;
     padding: 10px;

@@ -8,7 +8,6 @@ let scores = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
 let gameStart = document.getElementsByClassName("homePage");
 let timeLeft = 75;
-let submitBtn = document.querySelectorAll(".submit")
 let questions = document.querySelectorAll("h2");
 let optionsContainer = document.querySelectorAll("#container");
 
@@ -26,9 +25,14 @@ function setTime(){
     countTimer.textContent = "Seconds Left: " + timeLeft;
 
     if (timeLeft === 0) {
+      alert("Time's up!");
+      location.href="Assets/highscores.html";
       clearInterval(timerInterval);}
     }, 1000);
 }
+
+// if false answer button is pressed, 5 seconds is removed from time
+// create function to remove 5000 from timer
 
 answerKey[3].addEventListener("click", function(){
   question[0].classList.replace("visible", "hidden");
@@ -57,9 +61,11 @@ optionsContainer[i].addEventListener("click", function(e){
   let isCorrect = selectedOption.dataset.state;
   console.log(isCorrect);
   if (isCorrect === "true"){
+    localStorage.setItem("answer", isCorrect)
     alert("Correct!");
   } else if (isCorrect === "false"){
-    alert("Try Again!");
+    alert("Wrong!");
+    localStorage.setItem("answer", isCorrect)
   }
 });}
 
@@ -72,14 +78,6 @@ titleQuestion.setAttribute("style", "margin-bottom: 50px; font: bolder; font-siz
 for (let i = 0; i < answerKey.length; i++){
   answerKey[i].setAttribute("style", "padding-left: 20px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
 };
-
-for(let i = 0; i < submitBtn.length; i++){
-submitBtn[i].setAttribute("style", "padding-left: 30px; padding-right: 30px; background-color: #00008b; color: white; border: solid #FF7F50 2px; margin-top: 50px;");
-};
-
-submitBtn[4].addEventListener("click", function(){
-  console.log("button clicked");
-});
 
 function gotoLink(link){
   console.log(link.value);
