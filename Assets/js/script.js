@@ -7,8 +7,9 @@ let scoresLink = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
 let timeLeft = 75;
 let optionsContainer = document.querySelectorAll("#container");
-let answerTrue = document.querySelector(".true");
 let correctAnswers = localStorage.getItem("correct");
+// let userId = document.querySelector("input");
+
 
 // prevents right click
 window.addEventListener("contextmenu", e => e.preventDefault());
@@ -17,7 +18,7 @@ window.addEventListener("contextmenu", e => e.preventDefault());
 quizStart[0].addEventListener("click", function(){
   homePage.classList.replace("visible", "hidden");
   question[0].classList.replace("hidden", "visible");
-  localStorage.clear("correct");
+  // localStorage.clear("correct");
   setTime();
 });
 
@@ -29,23 +30,17 @@ function setTime(){
 
     if (timeLeft === 0) {
       alert("Time's up!");
-      // location.href="Assets/highscores.html";
-      clearInterval(timerInterval);
+      clearInterval(timerInterval); 
+      window.location="Assets/highscores.html"
       localStorage.setItem("correct", correctAnswers)}
     }, 1000);
 }
 
-function stopTime(){
-  setTimeout(setTime, 1000);
-}
-
 // pseudo code:
-// A)if false answer button is pressed, 5 seconds is removed from time
-//    1.create function to remove 5000 from timer
-// B)clear scores each round
-// C) carry initials and score to high scores page
-// D) when button is click time stops
-// 
+// A) When time is up, the alert takes you to the enter your initials section
+// B) clear scores each round, but shoow all scores on high scores page
+// C) carry initials to high scores page
+// D) when last answer button is clicked, time stops
 
 // shows and hides each question and answer block by selecting the right answer
 answerKey[3].addEventListener("click", function(){
@@ -68,13 +63,13 @@ answerKey[12].addEventListener("click", function(){
   question[4].classList.replace("hidden", "visible");
 });
 
+// shows score and input for initials to add to high scores page
 answerKey[18].addEventListener("click", function(){
   let enterScore = document.querySelector(".enterScore");
   let scoreHere = document.getElementById("scoreHere");
   question[4].classList.replace("visible", "hidden");
   enterScore.classList.replace("hidden", "visible");
   scoreHere.textContent = "Your Score: " + correctAnswers;
-  stopTime();
 });
 
 // confirming true/false for each question answered by a pop up alert
@@ -89,10 +84,12 @@ optionsContainer[i].addEventListener("click", function(e){
     localStorage.setItem("correct", correctAnswers)
     alert("Correct!");
   } else if (isCorrect === "false"){
+    timeLeft-=5;
     alert("Wrong!");
-    // localStorage.setItem("answer", isCorrect)
   }
 });}
+
+// localStorage.setItem("initials", userId)
 
 // }
 
