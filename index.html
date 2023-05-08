@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header><a href="Assets/highscores.html">High Scores</a></header>
+  <header><a href="Assets/highscores.html" class=":hidden">High Scores</a></header>
   <aside id="timer">Seconds left: </aside>
   <section>
     <h1 id="quizName">Multiple Choice Quiz</h1>
@@ -67,10 +67,15 @@
     <div id="container">
       <button class="button" data-state="false">||</button>
       <button class="button" data-state="false">-+</button>
-      <button class="button true" class="submit link" onclick="gotoLink(this)" href="Assets/highscores.html" data-state="true">!=</button>
+      <button class="button true" class="submit">!=</button>
       <button class="button" data-state="false">All of the above</button>
     </div>
   </section>
+  <section class="enterScore hidden">
+    <h2 id="scoreHere">Your Score:</h2>
+        <input id="initials" type="text" placeholder="Enter your initials">
+    <button class="btn" onclick="gotoLink(this)" href="Assets/highscores.html" data-state="true">Submit Score</button>
+</section>
   <script src="./Assets/js/script.js"></script>
 </body>
 
