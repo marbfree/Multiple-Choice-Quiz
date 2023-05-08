@@ -7,8 +7,9 @@ let scoresLink = document.querySelector("header");
 let countTimer = document.querySelector("#timer");
 let timeLeft = 75;
 let optionsContainer = document.querySelectorAll("#container");
-let correctAnswers = localStorage.getItem("correct");
+let correctAnswers = 0
 let timerInterval
+let correct = 0
 // let userId = document.querySelector("input");
 
 
@@ -19,7 +20,6 @@ window.addEventListener("contextmenu", e => e.preventDefault());
 quizStart[0].addEventListener("click", function(){
   homePage.classList.replace("visible", "hidden");
   question[0].classList.replace("hidden", "visible");
-  // localStorage.clear("correct");
   setTime();
 });
 
@@ -74,7 +74,6 @@ answerKey[18].addEventListener("click", function(){
   if (timeLeft > 0){
     clearInterval(timerInterval);
   }
-
 });
 
 // confirming true/false for each question answered by a pop up alert
@@ -112,7 +111,8 @@ for (let i = 0; i < answerKey.length; i++){
 
 // takes you to high scores at end of quiz via the correct answer
 function gotoLink(link){
-  console.log(link.value);
+  // getItems from local storage, update value, set item scores input+ score
+  // localStorage.setItem()
   location.href="Assets/highscores.html";
   enterEl.classList.replace("hidden", "visible");
   showHighScores.classList.replace("visible", "hidden");
