@@ -8,6 +8,7 @@ let countTimer = document.querySelector("#timer");
 let timeLeft = 75;
 let optionsContainer = document.querySelectorAll("#container");
 let correctAnswers = localStorage.getItem("correct");
+let timerInterval
 // let userId = document.querySelector("input");
 
 
@@ -24,7 +25,7 @@ quizStart[0].addEventListener("click", function(){
 
 // sets the timer at 75 secomds and stops at 0, taking you to high scores when quiz runs out of time
 function setTime(){
-  let timerInterval = setInterval(function(){
+    timerInterval = setInterval(function(){
     timeLeft--;
     countTimer.textContent = "Seconds Left: " + timeLeft;
 
@@ -70,6 +71,10 @@ answerKey[18].addEventListener("click", function(){
   question[4].classList.replace("visible", "hidden");
   enterScore.classList.replace("hidden", "visible");
   scoreHere.textContent = "Your Score: " + correctAnswers;
+  if (timeLeft > 0){
+    clearInterval(timerInterval);
+  }
+
 });
 
 // confirming true/false for each question answered by a pop up alert
