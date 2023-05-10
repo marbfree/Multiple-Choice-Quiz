@@ -37,15 +37,6 @@ function setTime(){
     }, 1000);
 }
 
-// pseudo code:
-// A) When time is up, the alert takes you to the enter your initials section
-// B) show all scores on high scores page
-// C) carry initials to high scores page
-// D) figure out why high scores page is not logging the correct number
-
-
-
-
 // shows and hides each question and answer block by selecting the right answer
 answerKey[3].addEventListener("click", function(){
   question[0].classList.replace("visible", "hidden");
@@ -93,13 +84,6 @@ optionsContainer[i].addEventListener("click", function(e){
     alert("Wrong!");
   }
 });}
-
-// let falseNextQuest = document.querySelectorAll('.false');
-// for (i of falseNextQuest) {
-//   i.addEventListener('click', function(){
-//     console.log(falseNextQuest)
-//   });
-// }
 
 // setting style for quiz title, the high score link, timer, and start button
 quizTitle.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");

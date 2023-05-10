@@ -33,6 +33,7 @@ h1, h2, p {
 
 h2 {
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .paragraph { 
@@ -65,8 +66,14 @@ input {
 
 #highscores {
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #00008b;
+    border: #00008b solid 5px;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    padding: 20px;
 }
 
 .button{
