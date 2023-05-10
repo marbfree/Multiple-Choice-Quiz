@@ -10,9 +10,6 @@ let optionsContainer = document.querySelectorAll("#container");
 let correctAnswers = 0
 let timerInterval
 let correct = 0
-// let userId = document.querySelector("input").value;
-// let input = document.querySelector("#initials");
-// let submitEl = document.querySelector('#subScore');
 
 
 
@@ -72,13 +69,8 @@ answerKey[12].addEventListener("click", function(){
 
 // shows score and input for initials to add to high scores page
 answerKey[18].addEventListener("click", function(){
-  let enterScore = document.querySelector(".enterScore");
-  let scoreHere = document.getElementById("scoreHere");
   question[4].classList.replace("visible", "hidden");
-  // enterScore.classList.replace("hidden", "visible");
   location.href="Assets/highscores.html";
-  // enterEl.classList.replace("hidden", "visible");
-  // scoreHere.textContent = "Your Score: " + correctAnswers;
   if (timeLeft > 0){
     clearInterval(timerInterval);
   }
@@ -117,21 +109,3 @@ for (let i = 0; i < answerKey.length; i++){
   answerKey[i].setAttribute("style", "padding-left: 20px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
 };
 
-// // takes you to high scores at end of quiz via the correct answer
-// function gotoLink(link){
-//   // getItems from local storage, update value, set item scores input+ score
-//   localStorage.setItem("input", userId);
-//   console.log("input");
-
-//   location.href="Assets/highscores.html";
-//   enterEl.classList.replace("hidden", "visible");
-//   showHighScores.classList.replace("visible", "hidden");
-// }
-
-// submit initials and score to the high scores
-// submitEl.addEventListener("click", function(){
-//   // localStorage.setItem("input", userId);
-//   localStorage.getItem("correct", correctAnswers);
-//   console.log(userId);
-//   location.href="Assets/highscores.html";
-// })

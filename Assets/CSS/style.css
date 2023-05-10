@@ -63,6 +63,12 @@ input {
     border-radius: 20% / 600%;
 }
 
+#highscores {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #00008b;
+}
+
 .button{
     display: flex;
     flex-direction: column;

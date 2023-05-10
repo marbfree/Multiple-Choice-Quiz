@@ -29,6 +29,9 @@ function displayHighScores(){
         let highscoreEl = document.createElement("p");
         highscoreEl.textContent = highscoreString;
         document.querySelector("#highscores").appendChild(highscoreEl);
+        if (i === 5){
+            userScoresArray=[];
+        }
     }
 }
 displayHighScores()
@@ -39,11 +42,7 @@ subScore.addEventListener("click", function(){
     displayScore.textContent = initials + " " + userInScore;
     userScoresArray.push({initials, userInScore})
     let logIt = localStorage.setItem("userInScore", JSON.stringify(userScoresArray));
-    // displayScore.textContent = localStorage.getItem(logIt);
     let initialsNow = JSON.parse(localStorage.getItem(initials, localStorage.getItem("correct")));
     console.log(logIt);
-    // displayScore.textContent = "Your Score " + initialsNow;
     console.log(initialsNow);
-
-
 })
