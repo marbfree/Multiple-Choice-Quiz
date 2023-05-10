@@ -47,6 +47,8 @@ function setTime(){
 // D) figure out why high scores page is not logging the correct number
 
 
+
+
 // shows and hides each question and answer block by selecting the right answer
 answerKey[3].addEventListener("click", function(){
   question[0].classList.replace("visible", "hidden");
@@ -75,6 +77,7 @@ answerKey[18].addEventListener("click", function(){
   question[4].classList.replace("visible", "hidden");
   // enterScore.classList.replace("hidden", "visible");
   location.href="Assets/highscores.html";
+  // enterEl.classList.replace("hidden", "visible");
   // scoreHere.textContent = "Your Score: " + correctAnswers;
   if (timeLeft > 0){
     clearInterval(timerInterval);

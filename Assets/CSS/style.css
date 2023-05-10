@@ -75,6 +75,7 @@ input {
 .btn {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
     padding: 10px;
     padding-left: 50px;
