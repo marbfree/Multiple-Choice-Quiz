@@ -89,12 +89,16 @@ optionsContainer[i].addEventListener("click", function(e){
     alert("Correct!");
   } else if (isCorrect === "false"){
     timeLeft-=5;
+    correctAnswers--
     alert("Wrong!");
   }
 });}
 
-// localStorage.setItem("initials", userId)
-
+// let falseNextQuest = document.querySelectorAll('.false');
+// for (i of falseNextQuest) {
+//   i.addEventListener('click', function(){
+//     console.log(falseNextQuest)
+//   });
 // }
 
 // setting style for quiz title, the high score link, timer, and start button
