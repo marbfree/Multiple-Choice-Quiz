@@ -18,6 +18,11 @@ titleHS.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; f
 displayScore.textContent = "Your Score: " + localStorage.getItem("correct")
 
 // takes you back to home page
+// let returnHome = document.getElementsByClassName("return");
+// returnHome.addEventListener("click", function(){
+//     console.log(returnHome);
+// })
+
 function gotoLink(link){
     console.log(link.value);
     location.href="/index.html";

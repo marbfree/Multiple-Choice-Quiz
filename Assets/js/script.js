@@ -32,7 +32,7 @@ function setTime(){
     if (timeLeft <= 0) {
       alert("Time's up!");
       clearInterval(timerInterval); 
-      window.location="Assets/highscores.html"
+      window.location="/highscores.html"
       localStorage.setItem("correct", correctAnswers)}
     }, 1000);
 }
@@ -61,7 +61,7 @@ answerKey[12].addEventListener("click", function(){
 // shows score and input for initials to add to high scores page
 answerKey[18].addEventListener("click", function(){
   question[4].classList.replace("visible", "hidden");
-  location.href="Assets/highscores.html";
+  location.href="/highscores.html";
   if (timeLeft > 0){
     clearInterval(timerInterval);
   }
