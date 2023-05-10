@@ -79,9 +79,9 @@ optionsContainer[i].addEventListener("click", function(e){
     localStorage.setItem("correct", correctAnswers)
     alert("Correct!");
   } else if (isCorrect === "false"){
-    timeLeft-=5;
+    timeLeft-=15;
     correctAnswers--
-    alert("Wrong!");
+    alert("Wrong answer! Try again!");
   }
 });}
 
