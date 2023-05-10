@@ -10,8 +10,9 @@ let optionsContainer = document.querySelectorAll("#container");
 let correctAnswers = 0
 let timerInterval
 let correct = 0
-let userId = document.querySelector("input").value;
+// let userId = document.querySelector("input").value;
 // let input = document.querySelector("#initials");
+// let submitEl = document.querySelector('#subScore');
 
 
 
@@ -43,6 +44,7 @@ function setTime(){
 // A) When time is up, the alert takes you to the enter your initials section
 // B) show all scores on high scores page
 // C) carry initials to high scores page
+// D) figure out why high scores page is not logging the correct number
 
 
 // shows and hides each question and answer block by selecting the right answer
@@ -71,10 +73,9 @@ answerKey[18].addEventListener("click", function(){
   let enterScore = document.querySelector(".enterScore");
   let scoreHere = document.getElementById("scoreHere");
   question[4].classList.replace("visible", "hidden");
-  enterScore.classList.replace("hidden", "visible");
-  correctAnswers++
-  alert("Correct!");
-  scoreHere.textContent = "Your Score: " + correctAnswers;
+  // enterScore.classList.replace("hidden", "visible");
+  location.href="Assets/highscores.html";
+  // scoreHere.textContent = "Your Score: " + correctAnswers;
   if (timeLeft > 0){
     clearInterval(timerInterval);
   }
@@ -105,7 +106,7 @@ optionsContainer[i].addEventListener("click", function(e){
 quizTitle.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
 countTimer.setAttribute("style", "color: #00008b;");
 quizStart[0].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
-quizStart[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
+// quizStart[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
 scoresLink.setAttribute("style", "color: #00008b; text-decoration: none;");
 
 // sets styling for all answer buttons
@@ -113,15 +114,21 @@ for (let i = 0; i < answerKey.length; i++){
   answerKey[i].setAttribute("style", "padding-left: 20px; padding-right: 20px; background-color: #00008b; color: white; border: solid #FF7F50 2px; border-radius: 25% 10%;");
 };
 
-// takes you to high scores at end of quiz via the correct answer
-function gotoLink(link){
-  // getItems from local storage, update value, set item scores input+ score
-  localStorage.setItem("input", userId);
-  console.log("input");
+// // takes you to high scores at end of quiz via the correct answer
+// function gotoLink(link){
+//   // getItems from local storage, update value, set item scores input+ score
+//   localStorage.setItem("input", userId);
+//   console.log("input");
 
-  location.href="Assets/highscores.html";
-  enterEl.classList.replace("hidden", "visible");
-  showHighScores.classList.replace("visible", "hidden");
-}
+//   location.href="Assets/highscores.html";
+//   enterEl.classList.replace("hidden", "visible");
+//   showHighScores.classList.replace("visible", "hidden");
+// }
 
-
+// submit initials and score to the high scores
+// submitEl.addEventListener("click", function(){
+//   // localStorage.setItem("input", userId);
+//   localStorage.getItem("correct", correctAnswers);
+//   console.log(userId);
+//   location.href="Assets/highscores.html";
+// })

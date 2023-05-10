@@ -12,11 +12,15 @@
 
 <body>
     <h1> High Scores</h1>
-    <section class="display visible">
-        <h2 id="myScore">scores displayed here</h2>
+    <section class="enterScore" id="jumptTo">
+        <h2 id="myScore">scores displayed here</h2>            <input id="initials" type="text" placeholder="Enter your initials">
+            <button id="subScore" class="btn">Submit Score</button>
+        <!-- <button class="btn" onclick="gotoLink(this)" href="Assets/highscores.html" data-state="true">Submit Score</button> --> 
+    </section>
+    <section class="display">
+        <!-- <h2 id="myScore">scores displayed here</h2> -->
         <button class="btn link" onclick="gotoLink(this)" href="/index.html">Return to Quiz</button>
     </section>
-   
 </body>
 <script src="./js/highscores.js"></script>
 <!-- <script src = "./js/script.js"></script> -->

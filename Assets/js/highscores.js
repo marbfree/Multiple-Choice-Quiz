@@ -8,6 +8,7 @@ let yourScore = document.querySelector("#scored");
 
 // sets style to buttons and header
 returnBtn[0].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b; padding: 10px 10px;");
+returnBtn[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b; padding: 10px 10px;");
 
 // returnBtn[1].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b;");
 titleHS.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; font-weight: bold; font-size: 50px; color: #00008b;");
@@ -19,3 +20,11 @@ function gotoLink(link){
     console.log(link.value);
     location.href="/index.html";
 }
+
+// submit initials and score to the high scores
+submitEl.addEventListener("click", function(){
+//   // localStorage.setItem("input", userId);
+//   localStorage.getItem("correct", correctAnswers);
+  console.log("button click");
+//   location.href="Assets/highscores.html";
+})
