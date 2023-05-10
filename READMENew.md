@@ -7,9 +7,6 @@ As a boot camp student, I wanted to take a times quiz on JavaScript that stores 
 ## Usage
 
 Click the "Let's Go!" button to begin the quiz.  View high scores from the high scores link on the home page.  
-
-
-
    
     ![alt text](./Assets/images/HighScores.png)
     ![alt text](./Assets/images/StartPage.png)
