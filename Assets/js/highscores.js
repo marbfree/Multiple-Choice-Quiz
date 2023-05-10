@@ -25,7 +25,7 @@ displayScore.textContent = "Your Score: " + localStorage.getItem("correct")
 
 function gotoLink(link){
     console.log(link.value);
-    location.href="/index.html";
+    location.href="/Multiple-Choice-Quiz/";
 }
 
 // displays high scores in a list
