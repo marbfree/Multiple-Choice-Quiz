@@ -10,7 +10,9 @@ let optionsContainer = document.querySelectorAll("#container");
 let correctAnswers = 0
 let timerInterval
 let correct = 0
-// let userId = document.querySelector("input");
+let userId = document.querySelector("input").value;
+// let input = document.querySelector("#initials");
+
 
 
 // prevents right click
@@ -29,7 +31,7 @@ function setTime(){
     timeLeft--;
     countTimer.textContent = "Seconds Left: " + timeLeft;
 
-    if (timeLeft === 0) {
+    if (timeLeft <= 0) {
       alert("Time's up!");
       clearInterval(timerInterval); 
       window.location="Assets/highscores.html"
@@ -39,9 +41,9 @@ function setTime(){
 
 // pseudo code:
 // A) When time is up, the alert takes you to the enter your initials section
-// B) clear scores each round, but shoow all scores on high scores page
+// B) show all scores on high scores page
 // C) carry initials to high scores page
-// D) when last answer button is clicked, time stops
+
 
 // shows and hides each question and answer block by selecting the right answer
 answerKey[3].addEventListener("click", function(){
@@ -70,6 +72,8 @@ answerKey[18].addEventListener("click", function(){
   let scoreHere = document.getElementById("scoreHere");
   question[4].classList.replace("visible", "hidden");
   enterScore.classList.replace("hidden", "visible");
+  correctAnswers++
+  alert("Correct!");
   scoreHere.textContent = "Your Score: " + correctAnswers;
   if (timeLeft > 0){
     clearInterval(timerInterval);
@@ -112,7 +116,9 @@ for (let i = 0; i < answerKey.length; i++){
 // takes you to high scores at end of quiz via the correct answer
 function gotoLink(link){
   // getItems from local storage, update value, set item scores input+ score
-  // localStorage.setItem()
+  localStorage.setItem("input", userId);
+  console.log("input");
+
   location.href="Assets/highscores.html";
   enterEl.classList.replace("hidden", "visible");
   showHighScores.classList.replace("visible", "hidden");
