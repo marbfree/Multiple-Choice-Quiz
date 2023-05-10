@@ -17,12 +17,7 @@ titleHS.setAttribute("style", "border-bottom: solid 2px #FF7F50; margin: 30px; f
 // shoes your recent score
 displayScore.textContent = "Your Score: " + localStorage.getItem("correct")
 
-// takes you back to home page
-// let returnHome = document.getElementsByClassName("return");
-// returnHome.addEventListener("click", function(){
-//     console.log(returnHome);
-// })
-
+// return to homepage button 
 function gotoLink(link){
     console.log(link.value);
     location.href="index.html";
@@ -49,6 +44,7 @@ subScore.addEventListener("click", function(){
     userScoresArray.push({initials, userInScore})
     let logIt = localStorage.setItem("userInScore", JSON.stringify(userScoresArray));
     let initialsNow = JSON.parse(localStorage.getItem(initials, localStorage.getItem("correct")));
+    enterEl.classList.replace("visible", "hidden");
     console.log(logIt);
     console.log(initialsNow);
 })
