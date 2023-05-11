@@ -19,7 +19,7 @@ function gotoLink(link){
 // displays high scores in a list
 function displayHighScores(){
     for (let i = 0; i < userScoresArray.length; i++){
-        let highscoreString = userScoresArray[i].initials + ": " + userScoresArray[i].userInScore;
+        let highscoreString = userScoresArray[i].initVal + ": " + userScoresArray[i].userInScore;
         let highscoreEl = document.createElement("p");
         highscoreEl.textContent = highscoreString;
         document.querySelector("#highscores").appendChild(highscoreEl);
