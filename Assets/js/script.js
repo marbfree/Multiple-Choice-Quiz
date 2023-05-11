@@ -17,7 +17,6 @@ let userScoresArray = JSON.parse(localStorage.getItem("userInScore")) || []
 let userInScore = localStorage.getItem("correct");
 let enterEl = document.querySelector(".enterScore");
 let initials = document.getElementById("initials");
-// let userInitials = localStorage.setItem("userInit", initials);
 
 // prevents right click
 window.addEventListener("contextmenu", e => e.preventDefault());
@@ -94,13 +93,14 @@ optionsContainer[i].addEventListener("click", function(e){
   }
 });}
 
+// displays current score before posting to high scores page
 displayScore.textContent = "Your Score: " + localStorage.getItem("correct")
 
 
 // submit initials and score to the high scores page
 submitBtn.addEventListener("click", function(){
   var initVal = initials.value;
-  userScoresArray.push({initVal, userInScore});
+  userScoresArray.push({initVal, userInScore:correctAnswers});
   let logIt = localStorage.setItem("userInScore", JSON.stringify(userScoresArray));
   let initialsNow = JSON.parse(localStorage.getItem(initVal, localStorage.getItem("correct")));
   enterEl.classList.replace("visible", "hidden");
