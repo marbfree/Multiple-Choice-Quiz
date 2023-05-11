@@ -16,17 +16,19 @@ let displayScore = document.querySelector("#myScore");
 let userScoresArray = JSON.parse(localStorage.getItem("userInScore")) || []
 let userInScore = localStorage.getItem("correct");
 let enterEl = document.querySelector(".enterScore");
-
+let initials = document.getElementById("initials").value;
+let userInitials = localStorage.setItem("userInit", initials);
 
 // prevents right click
 window.addEventListener("contextmenu", e => e.preventDefault());
 
 // shows quesiton one and starts timer
 quizStart[0].addEventListener("click", function(){
+  localStorage.setItem("correct", correctAnswers);
+   console.log(correctAnswers);
   homePage.classList.replace("visible", "hidden");
   question[0].classList.replace("hidden", "visible");
   setTime();
-  localStorage.setItem("correct", correctAnswers)
 });
 
 // sets the timer at 75 secomds and stops at 0, taking you to high scores when quiz runs out of time
@@ -96,8 +98,6 @@ displayScore.textContent = "Your Score: " + localStorage.getItem("correct")
 
 // submit initials and score to the high scores
 submitBtn.addEventListener("click", function(){
-  let initials = document.getElementById("initials").value;
-  displayScore.textContent = initials + " " + localStorage.getItem("correct");
   userScoresArray.push({initials, userInScore})
   let logIt = localStorage.setItem("userInScore", JSON.stringify(userScoresArray));
   let initialsNow = JSON.parse(localStorage.getItem(initials, localStorage.getItem("correct")));
@@ -105,7 +105,7 @@ submitBtn.addEventListener("click", function(){
   console.log(logIt);
   console.log(initialsNow);
   window.location="highscores.html";
-})
+});
 
 
 // setting style for quiz title, the high score link, timer, and start button

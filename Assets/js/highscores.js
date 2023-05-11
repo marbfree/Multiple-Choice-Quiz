@@ -1,14 +1,10 @@
 let returnBtn = document.getElementsByClassName("btn");
 let titleHS = document.querySelector("h1");
-// let subScore = document.querySelector("#subScore");
 let showHighScores = document.querySelector(".display");
-// let enterEl = document.querySelector(".enterScore");
 let displayScore = document.querySelector("#myScore");
 let yourScore = document.querySelector("#scored");
 let userInScore = localStorage.getItem("correct");
-console.log(userInScore);
 let userScoresArray = JSON.parse(localStorage.getItem("userInScore")) || []
-
 
 // sets style to buttons and header
 returnBtn[0].setAttribute("style", "border: solid #00008b 2px; background-color: #FF7F50; border-radius: 10% / 50%; color: #00008b; padding: 10px 10px;");
