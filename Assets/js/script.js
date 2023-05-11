@@ -29,6 +29,7 @@ quizStart[0].addEventListener("click", function(){
   homePage.classList.replace("visible", "hidden");
   question[0].classList.replace("hidden", "visible");
   setTime();
+  countTimer.classList.replace("hidden", "visible");
 });
 
 // sets the timer at 75 secomds and stops at 0, taking you to high scores when quiz runs out of time

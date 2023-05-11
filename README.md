@@ -2,7 +2,7 @@
 
 ## Description
 
-As a boot camp student, I want to take a timed quiz on JavaScript that stores my high scores to gauge my progress.  Each question is worth one point.  If you answer correctly, move on to the next question.  If you answer wrong, you loose 15 seconds off the time as well as one point.  
+As a boot camp student, I want to take a timed quiz on JavaScript that stores my high scores to gauge my progress.  Each question is worth one point.  If you answer correctly, move on to the next question.  If you answer wrong, you loose 15 seconds off the time.  
 
 ## Usage
 
@@ -17,3 +17,5 @@ Click the "Let's Go!" button to begin the quiz.  View high scores from the high 
 
 ##Acknowledgements
 Thank you to my tutor, Benicio Lopez, for helping me display the high scores.  Lines 27 - 38.
+
+Thank you to the askBCS Learning Assistants for keeping me on track and assisting me when I got stuck.
